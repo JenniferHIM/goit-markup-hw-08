@@ -1,0 +1,35 @@
+.social-box {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 16px;
+}
+
+.social-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socialmedia {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  fill: $icon-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $white;
+    @extend %animation;
+  }
+}
+
+.socialmedia-icon {
+  width: 20px;
+  height: 20px;
+}

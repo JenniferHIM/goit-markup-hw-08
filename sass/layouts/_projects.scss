@@ -1,0 +1,50 @@
+//Карточки
+.our-projects {
+  padding-top: 94px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.our-project-card:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.our-project-card:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.our-project-card:hover,
+.our-project-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  @extend %animation;
+}
+
+.our-project-card:hover .portfolio-overlay,
+.our-project-card .link:focus .portfolio-overlay {
+  transform: translateX(0);
+  @extend %animation;
+}
+
+.project-card-content {
+  border-right: 1px solid $card-content;
+  border-bottom: 1px solid $card-content;
+  border-left: 1px solid $card-content;
+  padding: 20px 24px;
+}
+
+.our-project-title {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-color;
+}
+
+.our-project-topic {
+  font-size: 16px;
+  line-height: 1.87;
+}

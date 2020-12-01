@@ -1,0 +1,28 @@
+/*Футер*/
+.footer-box {
+  background-color: $dark-background;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  margin-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-address {
+  font-weight: 400;
+  text-align: left;
+
+  .link {
+    color: $white;
+    margin-bottom: 9px;
+    display: inline-block;
+    font-style: normal;
+  }
+}
+
+.footer-contacts .link {
+  color: $footer-contacts;
+}

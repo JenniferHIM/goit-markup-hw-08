@@ -1,0 +1,49 @@
+//Features
+.features-section {
+  padding-top: 0;
+  padding-bottom: 94px;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.features-item {
+  padding-bottom: 0;
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.features-thumb {
+  position: relative;
+}
+
+.features-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 27px 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $overlay-color;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    @extend %animation;
+  }
+}

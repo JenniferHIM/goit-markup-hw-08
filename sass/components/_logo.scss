@@ -1,0 +1,29 @@
+//Логотип
+%logo {
+  margin-bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $title-color;
+}
+
+.logo-part {
+  color: $accent-color;
+}
+
+.logo-header {
+  @extend %logo;
+  color: $title-color;
+}
+
+.footer-logo {
+  @extend %logo;
+  color: $white;
+  display: inline-block;
+  margin-bottom: 20px;
+}

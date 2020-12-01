@@ -1,0 +1,41 @@
+//Подпишитесь на рассылку
+.submit {
+  margin-left: 93px;
+}
+
+.button-sign {
+  position: relative;
+  padding-left: 29px;
+  padding-right: 10px;
+  width: 200px;
+  min-height: 50px;
+  text-align: left;
+  line-height: 1.875;
+}
+
+.sign-input {
+  color: rgba(255, 255, 255, 0.6);
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $dark-background;
+
+  margin-right: 12px;
+  padding-left: 16px;
+}
+
+.submit-icon {
+  position: absolute;
+  fill: $white;
+  display: inline-flex;
+
+  width: 24px;
+  height: 24px;
+  top: 11px;
+  right: 23px;
+
+  @extend %animation;
+}

@@ -1,0 +1,30 @@
+//Clients
+.clients-box {
+  display: flex;
+
+  & .list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-title {
+  margin-top: 94px;
+}
+
+.clients-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  fill: $icon-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+    @extend %animation;
+  }
+}
