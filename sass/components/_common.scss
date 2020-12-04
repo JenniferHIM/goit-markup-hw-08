@@ -40,15 +40,10 @@ p {
 
 p {
   margin-bottom: 50px;
-}
 
-/*Контейнер для секций НЕ ТРОГАТЬ БОЛЬШЕ*/
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  @include for-size(mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 /*Список без маркеров*/
@@ -56,6 +51,10 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 60px;
+  }
 }
 
 /* Навигация */

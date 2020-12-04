@@ -4,16 +4,28 @@
 }
 
 .footer-container {
-  display: flex;
+  //display: flex;
   align-items: baseline;
-  margin-top: 94px;
+  //margin-top: 94px;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-address {
   font-weight: 400;
   text-align: left;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
   .link {
     color: $white;

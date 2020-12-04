@@ -1,9 +1,11 @@
 //Clients
 .clients-box {
-  display: flex;
+  @include for-size(desktop) {
+    display: flex;
 
-  & .list-item:not(:last-child) {
-    margin-right: 30px;
+    & .list-item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
