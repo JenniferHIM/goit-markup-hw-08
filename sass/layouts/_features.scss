@@ -33,6 +33,12 @@
   }
 }
 
+.features-item:first-child {
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
+}
+
 .features-thumb {
   position: relative;
 }

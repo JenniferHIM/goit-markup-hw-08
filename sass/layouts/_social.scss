@@ -2,11 +2,23 @@
   display: flex;
   padding-left: 32px;
   padding-right: 32px;
-  //margin-top: 16px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-list:not(:last-child) {
   margin-right: 10px;
+}
+
+.list.sosial-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .socialmedia {
