@@ -1,34 +1,61 @@
 /*Секция героя*/
+$gradient: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+);
+
 .hero-section {
-  max-width: 1600px;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/img.jpg");
   background-color: $dark-background;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: $gradient, url("../images/hero.jpg");
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 94px;
+    background-image: $gradient, url("../images/hero.jpg");
+  }
 }
 
 .hero-container {
-  max-width: 690px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  //max-width: 690px;
+  //padding-top: 200px;
+  //padding-bottom: 200px;
   text-align: center;
-  letter-spacing: 0.06em;
+
+  @media screen and (min-width: $mobile) {
+    max-width: 390px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 650px;
+  }
 
   .hero-title {
-    display: inline-block;
+    //display: inline-block;
     margin-bottom: 30px;
     max-width: 696px;
     color: $white;
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }

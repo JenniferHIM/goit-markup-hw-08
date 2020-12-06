@@ -21,9 +21,21 @@
   color: $title-color;
 }
 
+/* Логотип футера */
 .footer-logo {
   @extend %logo;
   color: $white;
   display: inline-block;
-  margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  @media screen and (max-width: $desktop-1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,8 +1,9 @@
 //Присоединяйтесь
 
 .join-us {
-  @media screen and (mах-width: 767px) {
+  @media screen and (mах-width: $tablet-1) {
     margin-left: 70px;
+    margin-top: 60px;
   }
 }
 

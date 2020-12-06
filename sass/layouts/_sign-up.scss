@@ -1,27 +1,32 @@
 //Подпишитесь на рассылку
 .submit {
-  @media screen and (min-width: 768px) {
-    margin-left: 93px;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: start;
   }
 }
 
-.button-sign {
-  position: relative;
-  padding-left: 29px;
-  padding-right: 10px;
-  //width: 200px;
-  //min-height: 50px;
-  text-align: left;
-  line-height: 1.875;
+.submit-form {
+  margin-top: 20px;
 
-  @media screen and (min-width: 480px) {
-    align-items: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-top: 0;
   }
+}
+
+.join-us-title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 20px;
 }
 
 .sign-input {
   color: rgba(255, 255, 255, 0.6);
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -29,12 +34,53 @@
   border-radius: 4px;
   background-color: $dark-background;
 
-  margin-right: 12px;
-  padding-left: 16px;
+  //margin-right: 12px;
+  padding-left: 15px 16px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $mobile) {
     margin-right: 0;
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
+
+  &::placeholder {
+    color: $white;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 15px;
+  }
+
+  &:focus,
+  &:not(:placeholder-shown):focus {
+    color: $white;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.button-sign {
+  @extend %button;
+  position: relative;
+  display: inline-flex;
+  padding-left: 28px;
+  margin-left: 12px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    width: 200px;
+    max-height: 50px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $accent-color;
+    @extend %animation;
   }
 }
 
@@ -42,11 +88,16 @@
   position: absolute;
   fill: $white;
   display: inline-flex;
-
   width: 24px;
   height: 24px;
-  top: 11px;
-  right: 23px;
+  top: 0;
+  right: 28px;
+  transform: translateY(50%);
 
-  @extend %animation;
+  .button-sign:hover &,
+  .button-sign:focus & {
+    fill: $accent-color;
+    transition-property: fill;
+    @extend %animation;
+  }
 }

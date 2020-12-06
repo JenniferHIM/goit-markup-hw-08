@@ -1,6 +1,5 @@
 //Кнопка
-.button {
-  display: inline-block;
+%button {
   padding: 10px 32px;
   min-width: 200px;
   border-radius: 4px;
@@ -26,4 +25,22 @@
     background-color: $accent-color;
     @extend %animation;
   }
+}
+
+.hero-button {
+  @extend %button;
+
+  &:hover,
+  &:focus {
+    @extend %hover-button;
+    @extend %animation;
+  }
+}
+
+.form-button {
+  @extend %button;
+  display: block;
+  //margin-top: 30px;
+  //margin-left: 0;
+  margin: 0 auto;
 }
