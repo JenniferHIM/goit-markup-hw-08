@@ -44,3 +44,31 @@
   //margin-left: 0;
   margin: 0 auto;
 }
+.menu-button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    transition-property: fill;
+    @extend %animation;
+  }
+
+  @media screen and (min-width: $tablet-1) {
+    display: none;
+  }
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+.menu-button.is-open .icon-close {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}

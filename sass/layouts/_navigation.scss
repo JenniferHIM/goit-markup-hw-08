@@ -1,21 +1,45 @@
 //Навигация сайта
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    letter-spacing: 0.02em;
+  }
+}
 
 .site-nav {
-  display: inline-flex;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
+  display: none;
+  //margin-top: 32px;
+  //margin-bottom: 32px;
 
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
+  }
 
-/*Применится ко всем, у которых есть сосед сверху*/
-.site-nav .menu-item + .menu-item {
-  margin-left: 50px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: 93px;
+  }
+
+  & .menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  & .menu-item {
+    position: relative;
+  }
 }
 
 .menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.314;
   letter-spacing: 0.02em;
@@ -26,5 +50,131 @@
     color: $accent-color;
     text-decoration: none;
     @extend %animation;
+  }
+}
+
+/*Контакты в навигации*/
+.auth-nav {
+  display: none;
+
+  & .link {
+    color: $main-text-color;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    align-items: center;
+
+    /*Применится ко всем, у которых есть сосед сверху*/
+    & .menu-item + .menu-item {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-end;
+
+    & .menu-item + .menu-item {
+      margin-left: 50px;
+    }
+  }
+}
+
+.email-icon {
+  margin-right: 10px;
+  fill: $main-text-color;
+
+  .contact-link:hover &,
+  .contact-link:focus & {
+    fill: $accent-color;
+    transition-property: fill;
+    @extend %animation;
+  }
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.167;
+  color: $main-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    transition-property: color;
+    @extend %animation;
+  }
+}
+
+.contact-link:hover .email-icon,
+.contact-link:focus {
+  fill: $accent-color;
+  @extend %animation;
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: $main-text-color;
+
+  .contacts-link:hover &,
+  .contacts-link:focus & {
+    fill: $accent-color;
+    transition-property: fill;
+    @extend %animation;
+  }
+}
+.contacts-icon.email {
+  width: 14px;
+  height: 10px;
+}
+.contacts-icon.tel {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts-icon.email {
+    width: 16px;
+    height: 12px;
+  }
+  .contacts-icon.tel {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+.email-icon {
+  margin-right: 10px;
+  fill: $main-text-color;
+}
+.email-icon.email {
+  width: 14px;
+  height: 10px;
+}
+.email-icon.tel {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: $desktop) {
+  .email-icon.email {
+    width: 16px;
+    height: 12px;
+  }
+  .email-icon.tel {
+    width: 10px;
+    height: 16px;
   }
 }

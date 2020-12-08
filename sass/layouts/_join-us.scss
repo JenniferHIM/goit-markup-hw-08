@@ -17,6 +17,10 @@
 
 .social-box-footer {
   display: flex;
+
+  @media screen and (min-width: $mobile) {
+    justify-content: center;
+  }
 }
 
 .footer {
