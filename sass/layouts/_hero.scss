@@ -15,13 +15,37 @@ $gradient: linear-gradient(
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: $gradient, url("../images/hero.jpg");
+  background-image: $gradient, url("../images/mobile/Header1x-min.jpg");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: $gradient, url("../images/mobile/Header2x.jpg");
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: $gradient, url("../images/tablet/Headerhero1x.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $gradient, url("../images/tablet/Headerhero2x.jpg");
+    }
+  }
 
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
-
+    height: 600px;
     margin-bottom: 94px;
-    background-image: $gradient, url("../images/hero.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: $gradient, url("../images/desktop/imghero.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $gradient, url("../images/desktop/Imghero2x-min.jpg");
+    }
   }
 }
 

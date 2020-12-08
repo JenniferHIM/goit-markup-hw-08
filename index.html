@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
     <!--Навигация-->
   <div class="container header-container">
       
@@ -127,7 +127,8 @@
             <ul class="list features-list">
               <li class="features-item">
                 <div class="features-thumb">
-                  <img src="./images/box1.jpg" 
+                  <img srcset="./images/desktop/img.jpg 1x, ./images/desktop/img1pic2x-min.jpg 2x" 
+                  src="./images/desktop/img.jpg" 
                   alt="планшет и клавиатура человек работает" 
                   width="370" 
                   height="294"/>
@@ -136,7 +137,8 @@
               </li>
               <li class="features-item">
                 <div class="features-thumb">
-                  <img src="./images/box2.jpg" 
+                  <img srcset="./images/desktop/img2.jpg 1x, ./images/desktop/img2pic2x-min.jpg 2x" 
+                  src="./images/desktop/img2.jpg" 
                   alt="телефон и ноутбук человек за работой" 
                   width="370" 
                   height="294"/>
@@ -145,9 +147,11 @@
               </li>
               <li class="features-item">
                 <div class="features-thumb">
-                  <img src="./images/box3.jpg" alt="планшет с красочной картинкой человек рисует с помощью стилуса"
-                    width="370" 
-                    height="294"/>
+                  <img srcset="./images/desktop/img3.jpg 1x, ./images/desktop/img3pic2x-min.jpg 2x" 
+                  src="./images/desktop/img3.jpg"
+                  alt="планшет с красочной картинкой человек рисует с помощью стилуса"
+                  width="370" 
+                  height="294"/>
                   <p class="features-overlay">Дизайнерские решения</p>
                 </div>
               </li>
@@ -163,12 +167,15 @@
         <h2 class="section-title">Наша команда</h2>
         <ul class="list">
           <li class="team-item">
-            <img
-              src="./images/teamcard1.jpg"
+          <picture>
+            <source srcset="./images/desktop/imgpm.jpg 1x, ./images/desktop/imgpm2x-min.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="./images/tablet/imgpd1x-min.jpg 1x, ./images/tablet/imgpd2x-min.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/mobile/imgpm1x-min.jpg 1x, ./images/mobile/imgpm2x.jpg 2x" media="(min-width: 480px)" />
+            <img src="./images/desktop/imgpm.jpg" 
               alt="Дизайнер мужчина в бордовой рубашке"
-              width="270"
-              height="260"
-            />
+              height="260">
+          </picture>
+            
             <h3 class="team-title">Игорь Демьяненко</h3>
             <p class="team-position">Product Designer</p>
             <ul class="list social-box">
@@ -177,7 +184,8 @@
                       <svg class="socialmedia-icon">
                           <use xlink:href="./images/spritenew.svg#icon-instagram">
                           </use>
-                      </svg></a>
+                      </svg>
+                  </a>
               </li>
 
               <li class="social-list">
@@ -207,13 +215,15 @@
           </li>
 
           <li class="team-item">
-            <img
-              src="./images/teamcard2.jpg"
+          <picture>
+            <source srcset="./images/desktop/imgfd.jpg 1x, ./images/desktop/imgfd2x-min.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="./images/tablet/imgfd1x.jpg 1x, ./images/tablet/imgfd2x.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/mobile/imgfd1x-min.jpg 1x, ./images/mobile/imgfd2x.jpg 2x" media="(min-width: 480px)" />
+            <img src="./images/desktop/imgfd.jpg" 
               alt="Фронэнд девелопер женщина"
-              width="270"
-              height="260"
+              height="260">
+          </picture>
             
-            />
             <h3 class="team-title">Ольга Репина</h3>
             <p class="team-position">Frontend Developer</p>
             <ul class="list social-box">
@@ -252,13 +262,16 @@
           </li>
 
           <li class="team-item">
-            <img
-              src="./images/teamcard3.jpg"
+          <picture>
+            <source srcset="./images/desktop/imgm.jpg 1x, ./images/desktop/imggm2x-min.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="./images/tablet/imgm1x-min.jpg 1x, ./images/tablet/imgm2x-min.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/mobile/imggm1x-min.jpg 1x, ./images/mobile/imggm2x.jpg 2x" media="(min-width: 480px)" />
+            <img src="./images/desktop/imgm.jpg" 
               alt="Маркетолог мужчина в голубой рубашке"
-              width="270"
               height="260"
-            
-            />
+              >
+          </picture>
+           
             <h3 class="team-title">Николай Тарасов</h3>
             <p class="team-position">Marketing</p>
             <ul class="list social-box">
@@ -297,13 +310,14 @@
           </li>
 
           <li class="team-item">
-            <img
-              src="./images/teamcard4.jpg"
+          <picture>
+            <source srcset="./images/desktop/imgui.jpg 1x, ./images/desktop/imgui2x-min.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="./images/tablet/imgui1x-min.jpg 1x, ./images/tablet/imgui2x-min.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/mobile/imgui1x-min.jpg 1x, ./images/mobile/imgui2x.jpg 2x" media="(min-width: 480px)" />
+            <img src="./images/desktop/imgui.jpg" 
               alt="UI Дизайнер мужчина в черной футболке"
-              width="270"
-              height="260"
-            
-            />
+              height="260">
+          
             <h3 class="team-title">Михаил Ермаков</h3>
             <p class="team-position">UI Designer</p>
             <ul class="list social-box">
