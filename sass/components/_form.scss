@@ -1,8 +1,31 @@
 //Form
-.form {
-  width: 448px;
-  margin-left: auto;
-  margin-right: auto;
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  background-color: $white;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  @extend %animation;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    max-height: 609px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 530px;
+    min-height: 580px;
+  }
+}
+
+.modal-form {
+  //width: 448px;
+  //margin-left: auto;
+  //margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-title {
@@ -15,40 +38,71 @@
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin-bottom: 20px;
-
-  & label {
-    margin-bottom: 4px;
-  }
 }
 
-.form-field input,
-textarea {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin: 0;
-  padding: 12px 16px;
-}
-
-.form-field input::placeholder {
-  background: $white;
+.form-label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.16;
+  color: $main-text-color;
 }
 
 .form-input {
   width: 100%;
-  padding-left: 45px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  //box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+    @extend %animation;
+  }
+}
+
+.form-icon {
+  //position: absolute;
+  // width: 18px;
+  // height: 18px;
+
+  top: 0;
+  // left: 12px;
+  // transform: translateY(-50%);
+  display: inline-block;
+  color: $title-color;
+
+  .form-input:focus + & {
+    fill: $accent-color;
+    @extend %animation;
+  }
+}
+
+// .form-field input::placeholder {
+//   background: $white;
+// }
+
+.textarea {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  &::placeholder {
+    color: $main-text-color;
+  }
 }
 
 .input-wrapper {
   position: relative;
 }
 
-.input-wrapper .form-input {
-  padding-left: 45px;
-}
+// .input-wrapper .form-input {
+//   padding-left: 45px;
+// }
 
 .input-wrapper:focus-within > .form-icon {
   fill: $accent-color;
@@ -69,61 +123,18 @@ textarea {
 
 .man-icon {
   position: absolute;
-  top: 14px;
+  top: 16px;
   left: 15px;
 }
 
 .call-icon {
   position: absolute;
-  top: 13px;
+  top: 18px;
   left: 14px;
 }
 
 .mail-icon {
   position: absolute;
-  top: 14px;
+  top: 18px;
   left: 13px;
-}
-
-.policy-field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.policy-lable {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1.71;
-  margin-bottom: 30px;
-}
-
-.policy-link {
-  color: $accent-color;
-  margin-left: 4px;
-}
-
-.checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  &:checked + .checkbox-icon {
-    border-color: $accent-color;
-    background-color: $accent-color;
-    background-image: url(../images/check.svg);
-    background-size: contain;
-    background-origin: border-box;
-    @extend %animation;
-  }
-}
-
-.checkbox-icon {
-  display: inline-block;
-  margin-right: 7px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid $title-color;
-  border-radius: 2px;
-  cursor: pointer;
 }

@@ -500,55 +500,62 @@
         
         <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-        <form class="form">
+        <form>
 
-            <div class="form-field">
-              <label for="user-name" class="form-label">Имя</label>
-              <div class="input-wrapper">
-                <input type="text" name="user-name" id="user-name" class="form-input">
-                <svg class="form-icon man-icon" width="12" height="12"> 
-                  <use xlink:href="./images/iconform.svg#icon-man"></use>
-                </svg>
-              </div>
+        <div role="group" class="modal-form">
+
+          <div class="form-field">
+            <label for="user-name" class="form-label">Имя</label>
+            <div class="input-wrapper">
+              <input type="text" name="user-name" id="user-name" class="form-input">
+              <svg class="form-icon man-icon" width="13" height="13">
+              <use xlink:href="./images/iconform.svg#icon-man"></use>
+              </svg>
             </div>
-
-            <div class="form-field">
+          </div>
+          
+          <div class="form-field">
             <label for="tel" class="form-label">Телефон</label>
             <div class="input-wrapper">
               <input type="tel" name="tel" id="tel" class="form-input">
-              <svg class="form-icon call-icon" width="13" height="13"> 
-                <use xlink:href="./images/iconform.svg#icon-call"></use>
+              <svg class="form-icon call-icon" width= "13" height="13">
+              <use xlink:href="./images/iconform.svg#icon-call"></use>
               </svg>
             </div>
-            </div>
-
-            <div class="form-field">
+          </div>
+          
+          <div class="form-field">
             <label for="email" class="form-label">Почта</label>
             <div class="input-wrapper">
               <input type="email" name="email" id="email" class="form-input">
-              <svg class="form-icon mail-icon" width="15" height="12"> 
-                <use xlink:href="./images/iconform.svg#icon-mail"></use>
+              <svg class="form-icon mail-icon" width= "15" height="12">
+              <use xlink:href="./images/iconform.svg#icon-mail"></use>
               </svg>
             </div>
-            
-            </div>
+          </div>
           
-            <div class="form-field">
-              <label for="comment" class="form-label">Комментарий</label>
-              <textarea name="comment" id="comment" cols="30" rows="5" class="form-textarea" placeholder="Введите текст"></textarea>
+          <div class="form-field">
+            <label for="comment" class="form-label">Комментарий</label>
+            <div class="input-wrapper">
+             <textarea name="comment" id="comment" cols="30" rows="5" class="form-input textarea" placeholder="Введите текст"></textarea>
             </div>
-
-
-            <div class="policy-field">						
-              <label class="policy-lable" for="policy">
-                <input class="checkbox" type="checkbox" name="policy" id="policy" required>
-                <span class="checkbox-icon"></span>
-                Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a>
-              </label>
-            </div>
-           
             
-            <button type="submit" class="form-button">Отправить</button>
+          </div>
+
+        </div>
+            
+          <div class="policy-field">
+            <label class="policy-label" for="policy">
+            <input class="checkbox" type="checkbox" name="policy" id="policy" required>
+            <svg class="checkbox-icon">
+             <use xlink:href="./images/check.svg" ></use>
+            </svg>
+            <p class="policy-terms">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a></p>
+            </label>
+          </div>
+         
+            
+        <button type="submit" class="form-button">Отправить</button>
           
         </form>
       </div>

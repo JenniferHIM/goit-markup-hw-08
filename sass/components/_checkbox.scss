@@ -1,25 +1,67 @@
+//Checkbox
+.policy-field {
+  margin-top: 10px;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin-right: 9px;
-
-  &:checked + .checkbox-icon {
-    border-color: $accent-color;
-    background-color: $accent-color;
-    background-image: url(../images/check.svg);
-    background-size: contain;
-    background-origin: border-box;
-    @extend %animation;
-  }
 }
 
 .checkbox-icon {
-  display: inline-block;
   margin-right: 7px;
+  margin-bottom: 30px;
   width: 16px;
   height: 15px;
   border: 2px solid $title-color;
   border-radius: 2px;
   cursor: pointer;
+
+  .checkbox:checked + &,
+  .checkbox:checked:focus + & {
+    border: transparent;
+    background-color: $accent-color;
+
+    background-size: contain;
+    background-origin: border-box;
+    @extend %animation;
+  }
+}
+.policy-terms {
+  font-size: 12px;
+  color: $main-text-color;
+  line-height: 1.16;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.policy-link {
+  color: $accent-color;
+  //margin-left: 4px;
+}
+
+.form-button {
+  @extend %button;
+
+  display: block;
+  margin-top: 30px;
+  margin-left: 0;
 }

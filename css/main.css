@@ -356,8 +356,9 @@ template {
 
 .link:hover, .link:focus, .menu-link:hover, .menu-link:focus, .contact-link:hover .email-icon,
 .contact-link:focus .email-icon, .contact-link:hover, .contact-link:focus, .contacts-link:hover .contacts-icon,
-.contacts-link:focus .contacts-icon, .mobile-link:hover, .mobile-link:focus, .hero-button:hover, .form-button:hover, .button-sign:hover, .hero-button:focus, .form-button:focus, .button-sign:focus, .menu-button:hover, .menu-button:focus, .features-overlay:hover, .features-overlay:focus, .socialmedia:hover, .socialmedia:focus, .clients-logo:hover, .clients-logo:focus, .footer-contacts .address-link:hover, .footer-contacts .address-link:focus, .button-sign:hover .submit-icon,
-.button-sign:focus .submit-icon, .filter-button:hover, .filter-button:focus, .close-modal:hover, .close-modal:focus, .input-wrapper:focus-within > .form-icon, .input-wrapper:focus-within > .form-input, .form-field:focus-within .form-textarea, .checkbox:checked + .checkbox-icon, .project-link:hover, .project-link:focus, .project-link:hover .portfolio-thumb .portfolio-overlay,
+.contacts-link:focus .contacts-icon, .mobile-link:hover, .mobile-link:focus, .hero-button:hover, .button-sign:hover, .form-button:hover, .hero-button:focus, .button-sign:focus, .form-button:focus, .menu-button:hover, .menu-button:focus, .features-overlay:hover, .features-overlay:focus, .socialmedia:hover, .socialmedia:focus, .clients-logo:hover, .clients-logo:focus, .footer-contacts .address-link:hover, .footer-contacts .address-link:focus, .button-sign:hover .submit-icon,
+.button-sign:focus .submit-icon, .filter-button:hover, .filter-button:focus, .close-modal:hover, .close-modal:focus, .modal, .form-input:focus, .form-input:focus + .form-icon, .input-wrapper:focus-within > .form-icon, .input-wrapper:focus-within > .form-input, .form-field:focus-within .form-textarea, .checkbox:checked + .checkbox-icon,
+.checkbox:checked:focus + .checkbox-icon, .project-link:hover, .project-link:focus, .project-link:hover .portfolio-thumb .portfolio-overlay,
 .project-link:focus .portfolio-thumb .portfolio-overlay {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -936,7 +937,7 @@ p {
   }
 }
 
-.hero-button, .form-button, .button-sign {
+.hero-button, .button-sign, .form-button {
   padding: 10px 32px;
   min-width: 200px;
   border-radius: 4px;
@@ -952,19 +953,14 @@ p {
   align-items: center;
 }
 
-.hero-button .hero-button:hover, .form-button .hero-button:hover, .button-sign .hero-button:hover, .hero-button .hero-button:focus, .form-button .hero-button:focus, .button-sign .hero-button:focus {
+.hero-button .hero-button:hover, .button-sign .hero-button:hover, .form-button .hero-button:hover, .hero-button .hero-button:focus, .button-sign .hero-button:focus, .form-button .hero-button:focus {
   background-color: #ffffff;
   color: #2196f3;
 }
 
-.hero-button:hover, .form-button:hover, .button-sign:hover, .hero-button:focus, .form-button:focus, .button-sign:focus {
+.hero-button:hover, .button-sign:hover, .form-button:hover, .hero-button:focus, .button-sign:focus, .form-button:focus {
   color: #ffffff;
   background-color: #2196f3;
-}
-
-.form-button {
-  display: block;
-  margin: 0 auto;
 }
 
 .menu-button {
@@ -1693,32 +1689,6 @@ p {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.modal {
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 450px;
-    max-height: 609px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    min-width: 528px;
-    min-height: 581px;
-  }
-}
-
 .close-modal {
   display: inline-block;
   position: absolute;
@@ -1749,10 +1719,33 @@ p {
   fill: #212121;
 }
 
-.form {
-  width: 448px;
-  margin-left: auto;
-  margin-right: auto;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    max-height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 530px;
+    min-height: 580px;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-title {
@@ -1765,39 +1758,53 @@ p {
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin-bottom: 20px;
 }
 
-.form-field label {
-  margin-bottom: 4px;
-}
-
-.form-field input,
-textarea {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin: 0;
-  padding: 12px 16px;
-}
-
-.form-field input::placeholder {
-  background: #ffffff;
+.form-label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.16;
+  color: #757575;
 }
 
 .form-input {
   width: 100%;
-  padding-left: 45px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.form-icon {
+  top: 0;
+  display: inline-block;
+  color: #212121;
+}
+
+.form-input:focus + .form-icon {
+  fill: #2196f3;
+}
+
+.textarea {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.textarea::placeholder {
+  color: #757575;
 }
 
 .input-wrapper {
   position: relative;
-}
-
-.input-wrapper .form-input {
-  padding-left: 45px;
 }
 
 .input-wrapper:focus-within > .form-icon {
@@ -1816,87 +1823,86 @@ textarea {
 
 .man-icon {
   position: absolute;
-  top: 14px;
+  top: 16px;
   left: 15px;
 }
 
 .call-icon {
   position: absolute;
-  top: 13px;
+  top: 18px;
   left: 14px;
 }
 
 .mail-icon {
   position: absolute;
-  top: 14px;
+  top: 18px;
   left: 13px;
 }
 
 .policy-field {
+  margin-top: 10px;
+}
+
+.policy-label {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.policy-lable {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1.71;
-  margin-bottom: 30px;
-}
-
-.policy-link {
-  color: #2196f3;
-  margin-left: 4px;
-}
-
 .checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.checkbox:checked + .checkbox-icon {
-  border-color: #2196f3;
-  background-color: #2196f3;
-  background-image: url(../images/check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.checkbox-icon {
-  display: inline-block;
-  margin-right: 7px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin-right: 9px;
 }
 
-.checkbox:checked + .checkbox-icon {
-  border-color: #2196f3;
-  background-color: #2196f3;
-  background-image: url(../images/check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
 .checkbox-icon {
-  display: inline-block;
   margin-right: 7px;
+  margin-bottom: 30px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.checkbox:checked + .checkbox-icon,
+.checkbox:checked:focus + .checkbox-icon {
+  border: transparent;
+  background-color: #2196f3;
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.policy-terms {
+  font-size: 12px;
+  color: #757575;
+  line-height: 1.16;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-terms {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.policy-link {
+  color: #2196f3;
+}
+
+.form-button {
+  display: block;
+  margin-top: 30px;
+  margin-left: 0;
 }
 
 .project-list {
