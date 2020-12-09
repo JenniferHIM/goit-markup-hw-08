@@ -38,13 +38,13 @@ p {
   margin: 0;
 }
 
-p {
-  margin-bottom: 50px;
+// p {
+//   margin-bottom: 50px;
 
-  @include for-size(mobile) {
-    margin-bottom: 30px;
-  }
-}
+//   @include for-size(mobile) {
+//     margin-bottom: 30px;
+//   }
+// }
 
 /*Список без маркеров*/
 .list {

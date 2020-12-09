@@ -404,16 +404,6 @@ p {
   margin: 0;
 }
 
-p {
-  margin-bottom: 50px;
-}
-
-@media (min-width: 480px) {
-  p {
-    margin-bottom: 30px;
-  }
-}
-
 /*Список без маркеров*/
 .list {
   margin: 0;
@@ -1732,7 +1722,6 @@ p {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    max-height: 609px;
   }
 }
 
