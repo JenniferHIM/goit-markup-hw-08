@@ -805,7 +805,7 @@ p {
 
 .mobile-contact .menu-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 .mobile-contact .menu-item:last-child {
@@ -1116,7 +1116,7 @@ p {
   background-image: url(../images/icon/astronaut.svg);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 100px) and (max-width: 1199px) {
   .features-section {
     display: none;
   }
@@ -1855,7 +1855,6 @@ p {
 
 .checkbox-icon {
   margin-right: 7px;
-  margin-bottom: 30px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
