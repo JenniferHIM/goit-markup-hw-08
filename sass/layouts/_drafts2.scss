@@ -1,25 +1,36 @@
 .checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin-right: 9px;
-
-  &:checked + .checkbox-icon {
-    border-color: $accent-color;
-    background-color: $accent-color;
-    background-image: url(../images/check.svg);
-    background-size: contain;
-    background-origin: border-box;
-    @extend %animation;
-  }
 }
 
 .checkbox-icon {
   display: inline-block;
   margin-right: 7px;
+  //fill: $white;
   width: 16px;
   height: 15px;
   border: 2px solid $title-color;
   border-radius: 2px;
   cursor: pointer;
+
+  .checkbox:checked + &,
+  .checkbox:checked:focus + & {
+    //fill: $white;
+    border: transparent;
+    background-color: $accent-color;
+
+    background-size: contain;
+    background-origin: border-box;
+    @extend %animation;
+  }
 }
