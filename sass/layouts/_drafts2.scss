@@ -1,136 +1,25 @@
-.modal {
-  position: absolute;
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 9px;
 
-  top: 50%;
-  left: 50%;
-  background-color: $white;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
-  transition-property: transform;
-  @extend %animation;
-
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    min-width: 530px;
-    min-height: 580px;
-  }
-}
-
-.modal-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-title {
-  font-style: normal;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: $title-color;
-  margin-bottom: 12px;
-}
-
-.form-field {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.form-label {
-  font-size: 12px;
-  letter-spacing: 0.01em;
-  line-height: 1.16;
-  color: $main-text-color;
-}
-
-.form-input {
-  width: 100%;
-  margin-top: 4px;
-  margin-bottom: 10px;
-  padding: 11px 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  //box-sizing: border-box;
-  border-radius: 4px;
-
-  &:focus {
-    border: 1px solid $accent-color;
-    outline: none;
+  &:checked + .checkbox-icon {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
     @extend %animation;
   }
 }
 
-.form-icon {
-  //position: absolute;
-  // width: 18px;
-  // height: 18px;
-
-  top: 0;
-  // left: 12px;
-  // transform: translateY(-50%);
+.checkbox-icon {
   display: inline-block;
-  color: $title-color;
-
-  .form-input:focus + & {
-    fill: $accent-color;
-    @extend %animation;
-  }
-}
-
-// .form-field input::placeholder {
-//   background: $white;
-// }
-
-.textarea {
-  height: 120px;
-  padding: 12px 16px;
-  resize: none;
-
-  &::placeholder {
-    color: $main-text-color;
-  }
-}
-
-.input-wrapper {
-  position: relative;
-}
-
-// .input-wrapper .form-input {
-//   padding-left: 45px;
-// }
-
-.input-wrapper:focus-within > .form-icon {
-  fill: $accent-color;
-  @extend %animation;
-}
-
-.input-wrapper:focus-within > .form-input {
-  outline: none;
-  border: 1px solid $accent-color;
-  @extend %animation;
-}
-
-.form-field:focus-within .form-textarea {
-  outline: none;
-  border: 1px solid $accent-color;
-  @extend %animation;
-}
-
-.man-icon {
-  position: absolute;
-  top: 16px;
-  left: 15px;
-}
-
-.call-icon {
-  position: absolute;
-  top: 18px;
-  left: 14px;
-}
-
-.mail-icon {
-  position: absolute;
-  top: 18px;
-  left: 13px;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  cursor: pointer;
 }

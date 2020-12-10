@@ -1908,6 +1908,13 @@ p {
   display: block;
   margin-top: 30px;
   margin-left: 0;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .form-button {
+    left: 25%;
+  }
 }
 
 .project-list {
