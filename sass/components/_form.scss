@@ -1,25 +1,4 @@
 //Form
-.modal {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  background-color: $white;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
-  transition-property: transform;
-  @extend %animation;
-
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    min-width: 530px;
-    min-height: 580px;
-  }
-}
-
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -36,14 +15,13 @@
 
 .form-field {
   position: relative;
-  margin-bottom: 20px;
 }
 
 .form-label {
+  color: $main-text-color;
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.16;
-  color: $main-text-color;
 }
 
 .form-input {
@@ -52,7 +30,6 @@
   margin-bottom: 10px;
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  //box-sizing: border-box;
   border-radius: 4px;
 
   &:focus {
@@ -61,7 +38,6 @@
     @extend %animation;
   }
 }
-
 .form-icon {
   //position: absolute;
   // width: 18px;
@@ -78,10 +54,6 @@
     @extend %animation;
   }
 }
-
-// .form-field input::placeholder {
-//   background: $white;
-// }
 
 .textarea {
   height: 120px;

@@ -23,6 +23,38 @@
   }
 }
 
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  background-color: $white;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  @extend %animation;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 530px;
+    min-height: 580px;
+  }
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
+}
+
 .close-modal {
   display: inline-block;
   position: absolute;
@@ -40,14 +72,6 @@
   //align-items: center;
 
   //margin: 0;
-
-  &:hover,
-  &:focus {
-    fill: $accent-color;
-    border-color: $accent-color;
-    background-color: $white;
-    @extend %animation;
-  }
 }
 
 .close-icon {
@@ -58,4 +82,12 @@
   width: 18px;
   height: 18px;
   fill: $title-color;
+
+  .close-modal:hover &,
+  .close-modal:focus & {
+    fill: $accent-color;
+    border-color: $accent-color;
+    background-color: $white;
+    @extend %animation;
+  }
 }

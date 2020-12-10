@@ -26,7 +26,7 @@
 
 .checkbox-icon {
   margin-right: 7px;
-
+  fill: $white;
   width: 16px;
   height: 15px;
   border: 2px solid $title-color;
@@ -35,6 +35,7 @@
 
   .checkbox:checked + &,
   .checkbox:checked:focus + & {
+    fill: $white;
     border: transparent;
     background-color: $accent-color;
 

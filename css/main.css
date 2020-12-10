@@ -357,7 +357,8 @@ template {
 .link:hover, .link:focus, .menu-link:hover, .menu-link:focus, .contact-link:hover .email-icon,
 .contact-link:focus .email-icon, .contact-link:hover, .contact-link:focus, .contacts-link:hover .contacts-icon,
 .contacts-link:focus .contacts-icon, .mobile-link:hover, .mobile-link:focus, .hero-button:hover, .button-sign:hover, .form-button:hover, .hero-button:focus, .button-sign:focus, .form-button:focus, .menu-button:hover, .menu-button:focus, .features-overlay:hover, .features-overlay:focus, .socialmedia:hover, .socialmedia:focus, .clients-logo:hover, .clients-logo:focus, .footer-contacts .address-link:hover, .footer-contacts .address-link:focus, .button-sign:hover .submit-icon,
-.button-sign:focus .submit-icon, .filter-button:hover, .filter-button:focus, .close-modal:hover, .close-modal:focus, .form-input:focus, .form-input:focus + .form-icon, .input-wrapper:focus-within > .form-icon, .input-wrapper:focus-within > .form-input, .form-field:focus-within .form-textarea, .checkbox:checked + .checkbox-icon,
+.button-sign:focus .submit-icon, .filter-button:hover, .filter-button:focus, .modal, .close-modal:hover .close-icon,
+.close-modal:focus .close-icon, .form-input:focus, .form-input:focus + .form-icon, .input-wrapper:focus-within > .form-icon, .input-wrapper:focus-within > .form-input, .form-field:focus-within .form-textarea, .checkbox:checked + .checkbox-icon,
 .checkbox:checked:focus + .checkbox-icon, .project-link:hover, .project-link:focus, .project-link:hover .portfolio-thumb .portfolio-overlay,
 .project-link:focus .portfolio-thumb .portfolio-overlay {
   transition-duration: 250ms;
@@ -1679,6 +1680,43 @@ p {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 530px;
+    min-height: 580px;
+  }
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
+}
+
 .close-modal {
   display: inline-block;
   position: absolute;
@@ -1693,12 +1731,6 @@ p {
   cursor: pointer;
 }
 
-.close-modal:hover, .close-modal:focus {
-  fill: #2196f3;
-  border-color: #2196f3;
-  background-color: #ffffff;
-}
-
 .close-icon {
   position: absolute;
   top: 50%;
@@ -1707,6 +1739,13 @@ p {
   width: 18px;
   height: 18px;
   fill: #212121;
+}
+
+.close-modal:hover .close-icon,
+.close-modal:focus .close-icon {
+  fill: #2196f3;
+  border-color: #2196f3;
+  background-color: #ffffff;
 }
 
 .modal-form {
@@ -1725,14 +1764,13 @@ p {
 
 .form-field {
   position: relative;
-  margin-bottom: 20px;
 }
 
 .form-label {
+  color: #757575;
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.16;
-  color: #757575;
 }
 
 .form-input {
@@ -1832,6 +1870,7 @@ p {
 
 .checkbox-icon {
   margin-right: 7px;
+  fill: #ffffff;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -1841,6 +1880,7 @@ p {
 
 .checkbox:checked + .checkbox-icon,
 .checkbox:checked:focus + .checkbox-icon {
+  fill: #ffffff;
   border: transparent;
   background-color: #2196f3;
   background-size: contain;
